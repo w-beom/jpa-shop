@@ -1,5 +1,6 @@
 package jpashop.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,10 +10,15 @@ public class Member {
 
     @Id
     @GeneratedValue
+    @Column(name = "MEMBER_ID")
     private Long Id;
+
     private String name;
+
     private String city;
+
     private String street;
+
     private String zipcode;
 
     public String getCity() {
